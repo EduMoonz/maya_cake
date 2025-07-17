@@ -1,13 +1,13 @@
 :root {
-    --white: #F0F0F0;
-    --black: #0A0A0A;
+  --white: #F0F0F0;
+  --black: #0A0A0A;
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
 section {
@@ -31,6 +31,6 @@ section {
   flex-wrap: wrap;
 }
 
-.inicio {
-    background-image: url(Imagens/foto.jpg);
+header a {
+  text-decoration: none;
 }
