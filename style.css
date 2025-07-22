@@ -30,6 +30,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  scroll-margin-top: 6rem;
 }
 
 .container {
@@ -54,8 +55,9 @@ header {
   min-height: 4rem;
   display: flex;
   align-items: center;
-  z-index: 1;
+  z-index: 1000;
   font-size: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 header::before {
@@ -113,6 +115,10 @@ nav ul li a.active::after {
 }
 
 /*Página Inicial*/
+
+main {
+  padding-top: 4rem;
+}
 .inicio {
   min-height: 100vh;
 }
