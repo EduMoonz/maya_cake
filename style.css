@@ -1,17 +1,32 @@
 :root {
+  --primary: #FFA25F;
+  --secondary: #FAA76B;
+  --tertiary: #7A716A;
+  --brown1: #504238;
+  --brown2: #33251B;
+  --darkb: #33251B;
   --white: #F0F0F0;
   --black: #0A0A0A;
 }
 
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--primary);
+  font-weight: 400;
+  font-style: normal;
+}
+
 section {
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,6 +46,181 @@ section {
   flex-wrap: wrap;
 }
 
-header a {
-  text-decoration: none;
+/*Cabeçalho*/
+header {
+  position: relative;
+  top: 0;
+  width: 100%;
+  min-height: 4rem;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  font-size: 1.25rem;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--darkb);
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+header .container .content{
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 4rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: var(--brown1);
+  font-weight: 600;
+  position: relative;
+}
+
+nav ul li a:hover{
+  color: var(--brown2);
+}
+
+nav ul li a::after {
+  content: "";
+  height: 0.125rem;
+  background-color: var(--brown2);
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s linear;
+  position: absolute;
+  bottom: -0.25rem;
+  left: 0;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+  transform: scaleX(1);
+}
+
+/*Página Inicial*/
+.inicio {
+  min-height: 100vh;
+}
+
+.inicio .container .content{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.inicio h1{
+  font-size: 8rem;
+}
+
+.inicio h4{
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .inicio h1 {
+    font-size: 5rem;
+  }
+
+  .inicio h4 {
+    font-size: 0.9rem;
+  }
+}
+
+/*Cardápio*/
+.cardapio {
+  background-color: #f9f9f9;
+  padding: 6rem 0 2rem;
+  padding-top: 2rem;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+}
+
+.cardapio .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.cardapio .titulo h1 {
+  color: #333;
+  font-size: 2.5rem;
+  text-align: left; /* Alinhado à esquerda */
+  position: absolute; /* Permite posicionamento absoluto */
+  top: 1rem; /* Distância do topo */
+  left: 2rem; /* Distância da esquerda */
+  z-index: 10; /* Garante que fique acima de tudo */
+  margin: 0; /* Remove margens para melhor controle de posicionamento */
+}
+
+.cardapio .container .content section {
+  margin-top: 4rem; /* Espaço entre o h1 e o primeiro h2 ("Bolos") */
+  display: block;
+  margin-bottom: 7rem;
+  display: block;
+}
+
+.cardapio section h2 {
+  color: #555;
+  font-size: 1.8rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.cardapio ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.cardapio li {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.cardapio li:hover {
+  transform: translateY(-5px);
+}
+
+.cardapio figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardapio img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.cardapio figcaption {
+  padding: 0.8rem;
+  text-align: center;
+  background: white;
+  font-size: 1rem;
+  color: #555;
 }
