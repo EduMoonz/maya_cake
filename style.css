@@ -26,6 +26,10 @@ body {
   font-style: normal;
 }
 
+main {
+  padding-top: 4rem;
+}
+
 section {
   display: flex;
   align-items: center;
@@ -116,9 +120,6 @@ nav ul li a.active::after {
 
 /*Página Inicial*/
 
-main {
-  padding-top: 4rem;
-}
 .inicio {
   min-height: 100vh;
 }
@@ -152,6 +153,7 @@ main {
 /*Cardápio*/
 .cardapio {
   background-color: #f9f9f9;
+  border-radius: 1rem;
   padding: 6rem 0 2rem;
   padding-top: 2rem;
   font-family: 'Arial', sans-serif;
