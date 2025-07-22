@@ -48,7 +48,7 @@ section {
 
 /*Cabeçalho*/
 header {
-  position: relative;
+  position: fixed;
   top: 0;
   width: 100%;
   min-height: 4rem;
@@ -65,10 +65,9 @@ header::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--darkb);
+  background-color: var(--tertiary);
   border-bottom-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
-  opacity: 0.5;
   z-index: -1;
 }
 
