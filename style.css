@@ -22,9 +22,9 @@ html {
 
 body {
   background-color: var(--primary);
-  font-family: "Sour Gummy", sans-serif;
+  font-family: "Pacifico", cursive;
   font-optical-sizing: auto;
-  font-weight: 200;
+  font-weight: 100;
   font-style: normal;
   font-variation-settings: "wdth" 100;
 }
@@ -34,8 +34,7 @@ main {
 }
 
 section {
-  display
-  : flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   scroll-margin-top: 6rem;
