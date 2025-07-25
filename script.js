@@ -1,9 +1,3 @@
-// Ano automático no rodapé
-document.addEventListener("DOMContentLoaded", () => {
-  const yearText = document.getElementById("year");
-  yearText.textContent = new Date().getFullYear();
-});
-
 // Efeito de digitação
 document.addEventListener("DOMContentLoaded", () => {
   const text = "A vida parece muito melhor para quem ri com a boca lambuzada de chocolate!";
@@ -15,8 +9,16 @@ document.addEventListener("DOMContentLoaded", () => {
       typingTarget.textContent += text.charAt(i);
       i++;
       setTimeout(type, 60);
+    } else {
+      typingTarget.textContent = text;
     }
   }
 
   type();
+});
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Tab") {
+    document.body.classList.add("keyboard-navigation");
+  }
 });
